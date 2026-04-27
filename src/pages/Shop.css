@@ -1,0 +1,104 @@
+.shop-page {
+  min-height: calc(100vh - var(--nav-height));
+  padding-top: 4rem;
+}
+
+.shop-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.shop-subtitle {
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-card {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.service-card.popular {
+  border-color: rgba(176, 38, 255, 0.4);
+  box-shadow: 0 0 20px rgba(176, 38, 255, 0.1);
+  transform: translateY(-10px);
+}
+
+.service-card.popular:hover {
+  border-color: rgba(176, 38, 255, 0.8);
+  box-shadow: 0 0 30px rgba(176, 38, 255, 0.2);
+  transform: translateY(-15px);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, var(--color-accent-purple), var(--color-accent-cyan));
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-text-primary);
+}
+
+.service-desc {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.service-price {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: 2rem;
+}
+
+.service-features {
+  margin-bottom: 2.5rem;
+}
+
+.service-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.feature-bullet {
+  color: var(--color-accent-cyan);
+  flex-shrink: 0;
+}
+
+.service-action {
+  margin-top: auto;
+}
