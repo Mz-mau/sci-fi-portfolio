@@ -106,7 +106,7 @@
 /* Features Section */
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
@@ -225,7 +225,7 @@
 /* Templates Section */
 .templates-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2rem;
 }
 
@@ -285,4 +285,12 @@
 .template-title {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .hero-visual {
+    transform: scale(0.65);
+    height: 300px;
+    margin-top: 1rem;
+  }
 }

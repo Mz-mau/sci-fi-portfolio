@@ -8,15 +8,15 @@ const Shop = () => {
     {
       id: 1,
       title: 'Custom Full Design',
-      description: 'A completely customized, high-end design for your specific business without the automated setup.',
+      description: 'A completely bespoke, high-end design architecture crafted specifically for your startup, without the automated deployment setup.',
       price: '$399',
-      features: ['Custom UI/UX Design', '5 Pages', 'Responsive Mobile Design'],
+      features: ['Bespoke UI/UX Design', 'Up to 5 Pages', 'Flawless Mobile Responsiveness'],
       popular: false
     },
     {
       id: 2,
       title: 'The Complete Package',
-      description: 'A full website with everything set up, automated, and ready to go live.',
+      description: 'The ultimate turnkey solution. A fully automated, premium website deployed and ready to capture clients from day one.',
       price: '$499',
       features: ['Full Setup & Automation', 'Free Domain & Hosting', 'SEO Optimization', '1-Month Support'],
       popular: true
@@ -34,8 +34,8 @@ const Shop = () => {
   return (
     <div className="shop-page container section animate-fade-in">
       <div className="shop-header">
-        <h1 className="section-title">Advertising <span className="gradient-text">Services</span></h1>
-        <p className="shop-subtitle">Premium digital packages to elevate your brand to the next dimension.</p>
+        <h1 className="section-title">Agency <span className="gradient-text">Services</span></h1>
+        <p className="shop-subtitle">Elite digital engineering packages designed to scale your solo enterprise to the next dimension.</p>
       </div>
 
       <div className="services-grid">

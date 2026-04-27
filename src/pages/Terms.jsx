@@ -15,12 +15,12 @@ const Terms = () => {
 
         <h3 style={{ color: 'var(--color-text-primary)', marginTop: '2rem', marginBottom: '1rem' }}>2. Services & Pricing</h3>
         <p>
-          Our starter templates begin at $85. Custom web experiences, branding, and marketing assets are priced based on the project scope defined during the discovery phase. A 50% non-refundable deposit is required to commence work, with the remaining 50% due upon project completion before final delivery.
+          Our starter templates begin at $119. Custom web architectures, comprehensive automation setups, and premium digital packages are priced based on the project scope defined during the discovery phase. A 50% non-refundable deposit is required to commence engineering, with the remaining 50% due upon project completion before final deployment.
         </p>
 
         <h3 style={{ color: 'var(--color-text-primary)', marginTop: '2rem', marginBottom: '1rem' }}>3. Revisions & Approvals</h3>
         <p>
-          Projects include a set number of revision rounds as specified in your proposal. Additional revisions outside the original scope will be billed at our standard hourly rate. Upon final approval, any further structural or design changes will require a new work order.
+          Projects include a set number of revision rounds to ensure your vision is executed flawlessly. Additional revisions outside the original scope will be billed at our standard agency rate. Upon final approval, any further structural or design modifications will require a new work order.
         </p>
 
         <h3 style={{ color: 'var(--color-text-primary)', marginTop: '2rem', marginBottom: '1rem' }}>4. Intellectual Property</h3>

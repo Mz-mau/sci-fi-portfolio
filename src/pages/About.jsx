@@ -23,10 +23,10 @@ const About = () => {
         <div className="about-text">
           <h2 className="text-glow">Architecting the Void</h2>
           <p>
-            I am a digital artisan specializing in creating immersive, highly functional web experiences. My work bridges the gap between aesthetics and performance, drawing inspiration from sci-fi minimalism to build interfaces that feel lightyears ahead.
+            We are a collective of digital artisans specializing in crafting immersive, highly functional web platforms for solo business owners and ambitious startups. Our work bridges the gap between premium aesthetics and raw performance, drawing inspiration from sci-fi minimalism to build interfaces that give new brands an elite competitive edge.
           </p>
           <p>
-            Every pixel is calculated. Every animation is intentional. I transform complex problems into elegant, intuitive digital products.
+            Every pixel is calculated. Every interaction is intentional. We transform complex operational needs into elegant, automated digital products that allow founders to focus entirely on scaling their enterprise.
           </p>
           
           <div className="skills-grid">
