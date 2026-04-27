@@ -7,26 +7,26 @@ const Shop = () => {
   const services = [
     {
       id: 1,
-      title: 'Neon Brand Identity',
-      description: 'A complete sci-fi inspired brand overhaul including logo, colors, and typography system.',
-      price: '$1,499',
-      features: ['Logo Design', 'Brand Guidelines', 'Social Media Kit'],
+      title: 'Custom Full Design',
+      description: 'A completely customized, high-end design for your specific business without the automated setup.',
+      price: '$399',
+      features: ['Custom UI/UX Design', '5 Pages', 'Responsive Mobile Design'],
       popular: false
     },
     {
       id: 2,
-      title: 'Quantum Web Experience',
-      description: 'A blazing fast, highly interactive 5-page website built with modern technologies.',
-      price: '$3,999',
-      features: ['Custom UI/UX', 'Advanced Animations', 'SEO Optimization', 'Responsive Design'],
+      title: 'The Complete Package',
+      description: 'A full website with everything set up, automated, and ready to go live.',
+      price: '$499',
+      features: ['Full Setup & Automation', 'Free Domain & Hosting', 'SEO Optimization', '1-Month Support'],
       popular: true
     },
     {
       id: 3,
-      title: 'Holographic Marketing Assets',
-      description: 'A suite of 3D-styled, eye-catching digital marketing assets for your ad campaigns.',
-      price: '$899',
-      features: ['10 Custom Graphics', 'Animated Banners', 'Ad Copy Consulting'],
+      title: 'Quantum Web Experience',
+      description: 'The ultimate immersive web application with advanced 3D animations and state-of-the-art tech.',
+      price: '$3,999',
+      features: ['Advanced Animations', 'WebGL/3D Elements', 'Custom Backend', 'Premium Branding'],
       popular: false
     }
   ];

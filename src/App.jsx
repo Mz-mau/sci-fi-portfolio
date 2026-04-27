@@ -6,6 +6,7 @@ import About from './pages/About';
 import Shop from './pages/Shop';
 import Booking from './pages/Booking';
 import Terms from './pages/Terms';
+import TemplatePreview from './pages/TemplatePreview';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/shop" element={<Shop />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/template/:id" element={<TemplatePreview />} />
         </Routes>
       </main>
       <Footer />

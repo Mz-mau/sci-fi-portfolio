@@ -97,22 +97,22 @@ const Home = () => {
 
         <div className="templates-grid">
           {[
-            { title: 'Salons & Spa', img: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=800', color: '#ffb6c1' },
-            { title: 'Food Services', img: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=800', color: '#ffa500' },
-            { title: 'Mining & Industry', img: 'https://images.unsplash.com/photo-1578507065211-1c4e99a5fd24?auto=format&fit=crop&q=80&w=800', color: '#a9a9a9' },
-            { title: 'Recreational', img: 'https://images.unsplash.com/photo-1533560904424-a0c61dc306fc?auto=format&fit=crop&q=80&w=800', color: '#00fa9a' },
-            { title: 'Babysitting', img: 'https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&q=80&w=800', color: '#87ceeb' },
-          ].map((template, index) => (
-            <div key={index} className="template-card glass-panel animate-fade-in" style={{ '--theme-color': template.color }}>
+            { id: 'salon', title: 'Salons & Spa', img: '/template_salon.png', color: '#ffb6c1' },
+            { id: 'food', title: 'Food Services', img: '/template_food.png', color: '#ffa500' },
+            { id: 'mining', title: 'Mining & Industry', img: '/template_mining.png', color: '#a9a9a9' },
+            { id: 'recreational', title: 'Recreational', img: '/template_recreational.png', color: '#00fa9a' },
+            { id: 'babysitting', title: 'Babysitting', img: '/template_babysitting.png', color: '#87ceeb' },
+          ].map((template) => (
+            <div key={template.id} className="template-card glass-panel animate-fade-in" style={{ '--theme-color': template.color }}>
               <div className="template-image-wrapper">
                 <img src={template.img} alt={template.title} className="template-image" />
                 <div className="template-price-tag">Available at only $85 starting</div>
               </div>
               <div className="template-info">
                 <h3 className="template-title" style={{ color: template.color }}>{template.title} Theme</h3>
-                <Link to="/booking">
+                <Link to={`/template/${template.id}`} style={{ width: '100%' }}>
                   <Button variant="outline" size="medium" style={{ width: '100%', marginTop: '1rem', borderColor: template.color, color: template.color }}>
-                    Select Theme <ExternalLink size={16} style={{ marginLeft: '8px' }} />
+                    Preview Theme <ExternalLink size={16} style={{ marginLeft: '8px' }} />
                   </Button>
                 </Link>
               </div>
