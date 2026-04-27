@@ -1,8 +1,13 @@
-import { Calendar, Clock, Video } from 'lucide-react';
+import { Calendar as CalendarIcon, Clock, Video } from 'lucide-react';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
+import { useState } from 'react';
 import Button from '../components/Button';
 import './Booking.css';
 
 const Booking = () => {
+  const [date, setDate] = useState(new Date());
+
   return (
     <div className="booking-page container section animate-fade-in">
       <div className="booking-layout">
@@ -25,7 +30,7 @@ const Booking = () => {
               <span>Google Meet / Zoom</span>
             </div>
             <div className="detail-item">
-              <Calendar className="detail-icon" size={20} />
+              <CalendarIcon className="detail-icon" size={20} />
               <span>Usually available Mon-Fri</span>
             </div>
           </div>
@@ -47,6 +52,16 @@ const Booking = () => {
             <div className="form-group">
               <label htmlFor="project">Project Coordinates (Brief Description)</label>
               <textarea id="project" rows="4" placeholder="Tell me about your idea..." className="form-input"></textarea>
+            </div>
+            
+            <div className="form-group">
+              <label>Select Synchronization Date</label>
+              <div className="calendar-wrapper">
+                <Calendar onChange={setDate} value={date} className="sci-fi-calendar" />
+              </div>
+              <p style={{ color: 'var(--color-accent-cyan)', fontSize: '0.9rem', marginTop: '0.5rem' }}>
+                Selected: {date.toDateString()}
+              </p>
             </div>
             
             <Button variant="primary" size="large" style={{ width: '100%', marginTop: '1rem' }}>

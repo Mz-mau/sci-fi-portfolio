@@ -1,4 +1,5 @@
 import { ShoppingCart, Star, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Button from '../components/Button';
 import './Shop.css';
 
@@ -56,10 +57,12 @@ const Shop = () => {
             </ul>
             
             <div className="service-action">
-              <Button variant={service.popular ? 'primary' : 'secondary'} size="large" style={{ width: '100%' }}>
-                <ShoppingCart size={18} style={{ marginRight: '8px' }} />
-                Purchase
-              </Button>
+              <Link to="/booking" style={{ width: '100%', display: 'block' }}>
+                <Button variant={service.popular ? 'primary' : 'secondary'} size="large" style={{ width: '100%' }}>
+                  <ShoppingCart size={18} style={{ marginRight: '8px' }} />
+                  Purchase
+                </Button>
+              </Link>
             </div>
           </div>
         ))}

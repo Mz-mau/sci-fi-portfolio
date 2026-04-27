@@ -1,4 +1,5 @@
 import { Hexagon, Mail, Globe, MessageSquare } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -8,7 +9,7 @@ const Footer = () => {
         <div className="footer-brand">
           <div className="footer-logo">
             <Hexagon className="logo-icon" size={20} />
-            <span className="logo-text text-glow">STUDIO</span>
+            <span className="logo-text text-glow">Mariyazi</span>
           </div>
           <p className="footer-description">
             Crafting elegant, sci-fi inspired digital experiences for the modern web.
@@ -22,7 +23,10 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Studio. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Mariyazi. All rights reserved.</p>
+        <div style={{ marginTop: '1rem' }}>
+          <Link to="/terms" style={{ color: 'var(--color-text-secondary)', fontSize: '0.85rem' }}>Terms & Conditions</Link>
+        </div>
       </div>
     </footer>
   );

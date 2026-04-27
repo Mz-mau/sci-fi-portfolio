@@ -1,4 +1,5 @@
-import { ArrowRight, Code, Monitor, Zap } from 'lucide-react';
+import { ArrowRight, Code, Monitor, Zap, ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Button from '../components/Button';
 import './Home.css';
 
@@ -23,10 +24,12 @@ const Home = () => {
             I craft blazing-fast, sci-fi elegant web applications that captivate users and elevate brands to the next dimension.
           </p>
           <div className="hero-actions delay-2 animate-fade-in">
-            <Button variant="primary" size="large">
+            <Button variant="primary" size="large" onClick={() => document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' })}>
               View Portfolio <ArrowRight size={18} style={{ marginLeft: '8px' }} />
             </Button>
-            <Button variant="outline" size="large">Contact Me</Button>
+            <Link to="/booking">
+              <Button variant="outline" size="large">Contact Me</Button>
+            </Link>
           </div>
         </div>
         
@@ -79,6 +82,39 @@ const Home = () => {
               <div className="project-info">
                 <span className="project-category">{project.category}</span>
                 <h3 className="project-title">{project.title}</h3>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Starter Templates Section */}
+      <section className="templates-section container section" id="templates">
+        <h2 className="section-title">Starter <span className="gradient-text">Templates</span></h2>
+        <p style={{ textAlign: 'center', color: 'var(--color-text-secondary)', marginBottom: '3rem', fontSize: '1.2rem' }}>
+          Professionally designed, highly customizable themes for your specific business niche.
+        </p>
+
+        <div className="templates-grid">
+          {[
+            { title: 'Salons & Spa', img: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=800', color: '#ffb6c1' },
+            { title: 'Food Services', img: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=800', color: '#ffa500' },
+            { title: 'Mining & Industry', img: 'https://images.unsplash.com/photo-1578507065211-1c4e99a5fd24?auto=format&fit=crop&q=80&w=800', color: '#a9a9a9' },
+            { title: 'Recreational', img: 'https://images.unsplash.com/photo-1533560904424-a0c61dc306fc?auto=format&fit=crop&q=80&w=800', color: '#00fa9a' },
+            { title: 'Babysitting', img: 'https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&q=80&w=800', color: '#87ceeb' },
+          ].map((template, index) => (
+            <div key={index} className="template-card glass-panel animate-fade-in" style={{ '--theme-color': template.color }}>
+              <div className="template-image-wrapper">
+                <img src={template.img} alt={template.title} className="template-image" />
+                <div className="template-price-tag">Available at only $85 starting</div>
+              </div>
+              <div className="template-info">
+                <h3 className="template-title" style={{ color: template.color }}>{template.title} Theme</h3>
+                <Link to="/booking">
+                  <Button variant="outline" size="medium" style={{ width: '100%', marginTop: '1rem', borderColor: template.color, color: template.color }}>
+                    Select Theme <ExternalLink size={16} style={{ marginLeft: '8px' }} />
+                  </Button>
+                </Link>
               </div>
             </div>
           ))}

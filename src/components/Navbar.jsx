@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className="container navbar-container">
         <Link to="/" className="navbar-logo">
           <Hexagon className="logo-icon" />
-          <span className="logo-text text-glow">STUDIO</span>
+          <span className="logo-text text-glow">Mariyazi</span>
         </Link>
 
         <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
