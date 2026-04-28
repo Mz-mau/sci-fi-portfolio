@@ -167,8 +167,7 @@
   height: 30px;
 }
 
-.mode-tablet .browser-content,
-.mode-mobile .browser-content {
+.mode-tablet .browser-content {
   border-radius: 20px;
   margin-bottom: 0;
   height: 800px;
@@ -178,15 +177,25 @@
 .mode-mobile .browser-content {
   border-radius: 28px;
   height: 700px;
+  margin-bottom: 0;
+  box-shadow: none;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-/* True Mobile/Tablet Mockup - Isolate Center UI */
-.full-preview-image.mode-tablet,
-.full-preview-image.mode-mobile {
+/* Tablet Mockup - Keep object-fit */
+.full-preview-image.mode-tablet {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top center;
+}
+
+/* True Mobile Mockup - Pure Vertical Crop */
+.full-preview-image.mode-mobile {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 @media (max-width: 768px) {
