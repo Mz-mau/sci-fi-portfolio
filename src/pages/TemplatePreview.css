@@ -180,11 +180,13 @@
   height: 700px;
 }
 
-/* True Mobile/Tablet Mockup */
+/* True Mobile/Tablet Mockup - Isolate Center UI */
 .full-preview-image.mode-tablet,
 .full-preview-image.mode-mobile {
-  height: auto;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
 }
 
 @media (max-width: 768px) {
