@@ -8,6 +8,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Shop from './pages/Shop';
 import CustomWork from './pages/CustomWork';
+import FAQ from './pages/FAQ';
+import Partnership from './pages/Partnership';
 import Booking from './pages/Booking';
 import Terms from './pages/Terms';
 import TemplatePreview from './pages/TemplatePreview';
@@ -21,6 +23,8 @@ function AnimatedRoutes() {
         <Route path="/about" element={<PageTransition><About /></PageTransition>} />
         <Route path="/shop" element={<PageTransition><Shop /></PageTransition>} />
         <Route path="/custom-work" element={<PageTransition><CustomWork /></PageTransition>} />
+        <Route path="/faq" element={<PageTransition><FAQ /></PageTransition>} />
+        <Route path="/partnership" element={<PageTransition><Partnership /></PageTransition>} />
         <Route path="/booking" element={<PageTransition><Booking /></PageTransition>} />
         <Route path="/terms" element={<PageTransition><Terms /></PageTransition>} />
         <Route path="/template/:id" element={<PageTransition><TemplatePreview /></PageTransition>} />

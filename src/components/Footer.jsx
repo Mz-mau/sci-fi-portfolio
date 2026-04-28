@@ -16,6 +16,12 @@ const Footer = () => {
           </p>
         </div>
         
+        <div className="footer-links">
+          <Link to="/faq">FAQ</Link>
+          <Link to="/partnership">Partnership</Link>
+          <Link to="/about">About Us</Link>
+        </div>
+
         <div className="footer-social">
           <a href="#" className="social-link"><Globe size={20} /></a>
           <a href="#" className="social-link"><MessageSquare size={20} /></a>
