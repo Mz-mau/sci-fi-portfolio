@@ -58,7 +58,7 @@ const Booking = () => {
         
         <div className="booking-info">
           <h1 className="section-title" style={{ textAlign: 'left', marginBottom: '1.5rem' }}>
-            Initiate <span className="gradient-text">Transmission</span>
+            Book Your <span className="gradient-text">Discovery Call</span>
           </h1>
           <p className="booking-desc">
             Ready to bring your vision to life? Book a 30-minute discovery call where our team will discuss your startup goals, aesthetic preferences, and operational needs.
@@ -81,13 +81,13 @@ const Booking = () => {
         </div>
 
         <div className="booking-form-container glass-panel">
-          <h3 className="form-title">Schedule Connection</h3>
+          <h3 className="form-title">Schedule a Consultation</h3>
           
           {status.success ? (
             <div className="success-message" style={{ textAlign: 'center', padding: '2rem 0', color: 'var(--color-accent-cyan)' }}>
               <CheckCircle size={48} style={{ margin: '0 auto 1rem auto' }} />
-              <h4>Transmission Successful</h4>
-              <p style={{ color: 'var(--color-text-secondary)', marginTop: '0.5rem' }}>Your transmission has been received. Our team will contact you shortly.</p>
+              <h4>Request Received</h4>
+              <p style={{ color: 'var(--color-text-secondary)', marginTop: '0.5rem' }}>Your consultation request has been received. Our team will contact you shortly.</p>
               <Button variant="outline" size="medium" style={{ marginTop: '2rem' }} onClick={() => setStatus({ ...status, success: false })}>
                 Send Another Request
               </Button>
@@ -95,22 +95,22 @@ const Booking = () => {
           ) : (
             <form className="booking-form" onSubmit={handleSubmit}>
               <div className="form-group">
-                <label htmlFor="name">System Designation (Name)</label>
+                <label htmlFor="name">Full Name</label>
                 <input type="text" id="name" required placeholder="John Doe" className="form-input" value={formData.name} onChange={handleChange} />
               </div>
               
               <div className="form-group">
-                <label htmlFor="email">Comms Link (Email)</label>
+                <label htmlFor="email">Email Address</label>
                 <input type="email" id="email" required placeholder="john@example.com" className="form-input" value={formData.email} onChange={handleChange} />
               </div>
               
               <div className="form-group">
-                <label htmlFor="project">Project Coordinates (Brief Description)</label>
+                <label htmlFor="project">Project Details (Brief Description)</label>
                 <textarea id="project" required rows="4" placeholder="Tell us about your company and what you need..." className="form-input" value={formData.project} onChange={handleChange}></textarea>
               </div>
               
               <div className="form-group">
-                <label>Select Synchronization Date</label>
+                <label>Select a Date</label>
                 <div className="calendar-wrapper">
                   <Calendar onChange={setDate} value={date} className="sci-fi-calendar" />
                 </div>
@@ -122,7 +122,7 @@ const Booking = () => {
               {status.error && <p style={{ color: '#ff5f56', fontSize: '0.9rem' }}>{status.error}</p>}
               
               <Button variant="primary" size="large" style={{ width: '100%', marginTop: '1rem', opacity: status.submitting ? 0.7 : 1 }} disabled={status.submitting}>
-                {status.submitting ? 'Transmitting...' : 'Request Synchronization'}
+                {status.submitting ? 'Submitting...' : 'Request Consultation'}
               </Button>
             </form>
           )}

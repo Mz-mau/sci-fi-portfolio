@@ -11,10 +11,10 @@ const Home = () => {
         <div className="hero-content animate-fade-in">
           <div className="badge">AVAILABLE FOR FREELANCE</div>
           <h1 className="hero-title">
-            Designing the <span className="text-glow">Future</span> of <br/> Digital Experiences.
+            Designing Elite <br/> <span className="text-glow">Digital Experiences</span> for Every Business.
           </h1>
           <p className="hero-subtitle delay-1 animate-fade-in">
-            We architect blazing-fast, sci-fi elegant web applications designed exclusively to help solo founders and ambitious startups scale from zero to the next dimension.
+            We architect high-performance, custom web applications and business automations designed to help founders and ambitious startups scale with absolute efficiency.
           </p>
           <div className="hero-actions delay-2 animate-fade-in">
             <Button variant="primary" size="large" onClick={() => document.getElementById('templates').scrollIntoView({ behavior: 'smooth' })}>
@@ -41,7 +41,7 @@ const Home = () => {
           <div className="feature-card glass-panel">
             <Monitor className="feature-icon" size={32} />
             <h3>Immersive UI/UX</h3>
-            <p>Designing interfaces that look like they belong in 2050, focusing on visual hierarchy and aesthetics.</p>
+            <p>Designing modern, premium interfaces that focus on visual hierarchy, conversion, and world-class aesthetics.</p>
           </div>
           <div className="feature-card glass-panel">
             <Zap className="feature-icon" size={32} />

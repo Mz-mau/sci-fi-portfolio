@@ -14,7 +14,7 @@ const CustomWork = () => {
     {
       icon: <Layers size={32} />,
       title: 'UI/UX Design',
-      description: 'Designing immersive digital interfaces with a focus on sci-fi aesthetics and flawless user journeys.',
+      description: 'Designing immersive digital interfaces with a focus on modern aesthetics and flawless user journeys.',
       features: ['Wireframing', 'High-Fidelity Mockups', 'Interactive Prototypes', 'Design Systems']
     },
     {
@@ -49,7 +49,7 @@ const CustomWork = () => {
 
       <div className="cta-section glass-panel animate-fade-in">
         <h2 className="cta-title">Have a specific project in mind?</h2>
-        <p className="cta-text">From minimalist logos to complex quantum-level applications, let's architect your vision.</p>
+        <p className="cta-text">From minimalist logos to complex enterprise-level applications, let's architect your vision.</p>
         <Link to="/booking">
           <Button variant="primary" size="large">
             Get a Custom Quote <ArrowRight size={18} style={{ marginLeft: '8px' }} />

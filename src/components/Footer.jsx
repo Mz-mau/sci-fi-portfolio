@@ -12,7 +12,7 @@ const Footer = () => {
             <span className="logo-text text-glow">Mariyazi</span>
           </div>
           <p className="footer-description">
-            Crafting elegant, sci-fi inspired digital experiences for the modern web.
+            Building high-performance custom websites and business automation tools tailored to your unique needs.
           </p>
         </div>
         

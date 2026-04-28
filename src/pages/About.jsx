@@ -23,7 +23,7 @@ const About = () => {
         <div className="about-text">
           <h2 className="text-glow">Architecting the Void</h2>
           <p>
-            We are a collective of digital artisans specializing in crafting immersive, highly functional web platforms for solo business owners and ambitious startups. Our work bridges the gap between premium aesthetics and raw performance, drawing inspiration from sci-fi minimalism to build interfaces that give new brands an elite competitive edge.
+            We are a collective of digital artisans specializing in crafting high-performance, custom web platforms for business owners and ambitious startups. Our work bridges the gap between premium aesthetics and raw performance, building interfaces that give brands a distinct competitive edge in the modern market.
           </p>
           <p>
             Every pixel is calculated. Every interaction is intentional. We transform complex operational needs into elegant, automated digital products that allow founders to focus entirely on scaling their enterprise.
