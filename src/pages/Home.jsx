@@ -21,7 +21,7 @@ const Home = () => {
               View Templates <ArrowRight size={18} style={{ marginLeft: '8px' }} />
             </Button>
             <Link to="/booking">
-              <Button variant="outline" size="large">Partner With Us</Button>
+              <Button variant="outline" size="large">Launch Your Site</Button>
             </Link>
           </div>
         </div>
