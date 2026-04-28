@@ -19,9 +19,9 @@ const CustomWork = () => {
     },
     {
       icon: <Cpu size={32} />,
-      title: 'Custom Engineering',
-      description: 'Bespoke technical solutions ranging from complex backends to interactive 3D web experiences.',
-      features: ['React/Next.js Apps', 'Three.js Integration', 'API Development', 'Performance Tuning']
+      title: 'Business Operation Automation',
+      description: 'Streamlining your enterprise with custom-built internal tools, automated workflows, and CRM integrations.',
+      features: ['Internal Dashboards', 'Workflow Automation', 'API Integrations', 'Performance Optimization']
     }
   ];
 

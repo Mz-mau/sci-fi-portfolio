@@ -28,7 +28,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden;
+  overflow: visible; /* Changed from hidden to show the badge */
 }
 
 .service-image-wrapper {
@@ -36,6 +36,7 @@
   height: 200px;
   overflow: hidden;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px 12px 0 0; /* Match glass-panel radius */
 }
 
 .service-image {
@@ -84,6 +85,8 @@
   gap: 6px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  z-index: 10;
+  white-space: nowrap;
 }
 
 .service-title {
