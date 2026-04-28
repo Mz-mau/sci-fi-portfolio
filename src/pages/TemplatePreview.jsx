@@ -1,29 +1,31 @@
 import { useParams, Link } from 'react-router-dom';
 import { useState } from 'react';
-import { ArrowLeft, Monitor, Smartphone, Tablet } from 'lucide-react';
+import { ArrowLeft, Layout, LayoutGrid, LayoutTemplate } from 'lucide-react';
 import Button from '../components/Button';
 import './TemplatePreview.css';
 
 const templates = {
-  salon: { title: 'Salons & Spa', imgDesktop: '/template_salon.png', imgTablet: '/template_salon_tablet.png', imgMobile: '/template_salon_mobile.png', color: '#ffb6c1' },
-  food: { title: 'Food Services', imgDesktop: '/template_food.png', imgTablet: '/template_food_tablet.png', imgMobile: '/template_food_mobile.png', color: '#ffa500' },
-  health: { title: 'Healthcare & Practitioners', imgDesktop: '/template_health.png', imgTablet: '/template_health_tablet.png', imgMobile: '/template_health_mobile.png', color: '#00ced1' },
-  ecommerce: { title: 'E-Commerce Retail', imgDesktop: '/template_ecommerce.png', imgTablet: '/template_ecommerce_tablet.png', imgMobile: '/template_ecommerce_mobile.png', color: '#d2b48c' },
-  realestate: { title: 'Real Estate & Properties', imgDesktop: '/template_realestate.png', imgTablet: '/template_realestate_tablet.png', imgMobile: '/template_realestate_mobile.png', color: '#ffd700' },
-  mining: { title: 'Mining & Industry', imgDesktop: '/template_mining.png', imgTablet: '/template_mining_tablet.png', imgMobile: '/template_mining_mobile.png', color: '#a9a9a9' },
-  recreational: { title: 'Recreational', imgDesktop: '/template_recreational.png', imgTablet: '/template_recreational_tablet.png', imgMobile: '/template_recreational_mobile.png', color: '#00fa9a' },
-  fitness: { title: 'Fitness & Gym', imgDesktop: '/template_fitness.png', imgTablet: '/template_fitness_tablet.png', imgMobile: '/template_fitness_mobile.png', color: '#ff4500' },
-  babysitting: { title: 'Babysitting', imgDesktop: '/template_babysitting.png', imgTablet: '/template_babysitting_tablet.png', imgMobile: '/template_babysitting_mobile.png', color: '#87ceeb' },
+  salon: { title: 'Salons & Spa', img1: '/template_salon.png', img2: '/template_salon_2.png', img3: '/template_salon_3.png', color: '#ffb6c1' },
+  food: { title: 'Food Services', img1: '/template_food.png', img2: '/template_food_2.png', img3: '/template_food_3.png', color: '#ffa500' },
+  health: { title: 'Healthcare & Practitioners', img1: '/template_health.png', img2: '/template_health_2.png', img3: '/template_health_3.png', color: '#00ced1' },
+  ecommerce: { title: 'E-Commerce Retail', img1: '/template_ecommerce.png', img2: '/template_ecommerce_2.png', img3: '/template_ecommerce_3.png', color: '#d2b48c' },
+  realestate: { title: 'Real Estate & Properties', img1: '/template_realestate.png', img2: '/template_realestate_2.png', img3: '/template_realestate_3.png', color: '#ffd700' },
+  mining: { title: 'Mining & Industry', img1: '/template_mining.png', img2: '/template_mining_2.png', img3: '/template_mining_3.png', color: '#a9a9a9' },
+  recreational: { title: 'Recreational', img1: '/template_recreational.png', img2: '/template_recreational_2.png', img3: '/template_recreational_3.png', color: '#00fa9a' },
+  fitness: { title: 'Fitness & Gym', img1: '/template_fitness.png', img2: '/template_fitness_2.png', img3: '/template_fitness_3.png', color: '#ff4500' },
+  babysitting: { title: 'Babysitting', img1: '/template_babysitting.png', img2: '/template_babysitting_2.png', img3: '/template_babysitting_3.png', color: '#87ceeb' },
 };
 
 const TemplatePreview = () => {
   const { id } = useParams();
   const template = templates[id];
-  const [deviceMode, setDeviceMode] = useState('desktop');
+  const [variation, setVariation] = useState('1');
 
   if (!template) {
     return <div className="container section">Template Not Found</div>;
   }
+
+  const currentImg = variation === '1' ? template.img1 : variation === '2' ? template.img2 : template.img3;
 
   return (
     <div className="template-preview-page animate-fade-in" style={{ '--theme-color': template.color }}>
@@ -38,9 +40,10 @@ const TemplatePreview = () => {
           </div>
           
           <div className="device-toggles hide-mobile">
-            <Monitor size={20} className={deviceMode === 'desktop' ? 'active' : ''} onClick={() => setDeviceMode('desktop')} />
-            <Tablet size={20} className={deviceMode === 'tablet' ? 'active' : ''} onClick={() => setDeviceMode('tablet')} />
-            <Smartphone size={20} className={deviceMode === 'mobile' ? 'active' : ''} onClick={() => setDeviceMode('mobile')} />
+            <span className="variation-label">Design Variant:</span>
+            <Layout size={20} className={variation === '1' ? 'active' : ''} onClick={() => setVariation('1')} />
+            <LayoutGrid size={20} className={variation === '2' ? 'active' : ''} onClick={() => setVariation('2')} />
+            <LayoutTemplate size={20} className={variation === '3' ? 'active' : ''} onClick={() => setVariation('3')} />
           </div>
           
           <div className="action-buttons">
@@ -55,25 +58,21 @@ const TemplatePreview = () => {
       </div>
 
       {/* Simulated Browser Window */}
-      <div className={`preview-container container section mode-${deviceMode}`}>
-        <div className="device-frame">
-          {deviceMode === 'desktop' && (
-            <div className="browser-chrome">
-              <div className="dots">
-                <span></span><span></span><span></span>
-              </div>
-              <div className="url-bar">www.your-{id}-business.com</div>
+      <div className="preview-container container section">
+        <div className="browser-window">
+          <div className="browser-chrome">
+            <div className="dots">
+              <span></span><span></span><span></span>
             </div>
-          )}
-          
-          {deviceMode !== 'desktop' && (
-            <div className="mobile-notch"></div>
-          )}
+            <div className="url-bar">www.your-{id}-business.com</div>
+          </div>
           
           <div className="browser-content">
-            {deviceMode === 'desktop' && <img src={template.imgDesktop} alt={`${template.title} Desktop Preview`} className={`full-preview-image mode-${deviceMode}`} />}
-            {deviceMode === 'tablet' && <img src={template.imgTablet} alt={`${template.title} Tablet Preview`} className={`full-preview-image mode-${deviceMode}`} />}
-            {deviceMode === 'mobile' && <img src={template.imgMobile} alt={`${template.title} Mobile Preview`} className={`full-preview-image mode-${deviceMode}`} />}
+            <img 
+              src={currentImg} 
+              alt={`${template.title} Variation ${variation}`} 
+              className="full-preview-image" 
+            />
           </div>
         </div>
       </div>
