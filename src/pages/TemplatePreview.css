@@ -180,12 +180,11 @@
   height: 700px;
 }
 
-/* Simulate Mobile/Tablet Crop */
+/* True Mobile/Tablet Mockup */
 .full-preview-image.mode-tablet,
 .full-preview-image.mode-mobile {
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
+  height: auto;
+  min-height: 100%;
 }
 
 @media (max-width: 768px) {

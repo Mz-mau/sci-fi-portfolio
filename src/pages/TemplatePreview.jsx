@@ -5,15 +5,15 @@ import Button from '../components/Button';
 import './TemplatePreview.css';
 
 const templates = {
-  salon: { title: 'Salons & Spa', img: '/template_salon.png', color: '#ffb6c1' },
-  food: { title: 'Food Services', img: '/template_food.png', color: '#ffa500' },
-  health: { title: 'Healthcare & Practitioners', img: '/template_health.png', color: '#00ced1' },
-  ecommerce: { title: 'E-Commerce Retail', img: '/template_ecommerce.png', color: '#d2b48c' },
-  realestate: { title: 'Real Estate & Properties', img: '/template_realestate.png', color: '#ffd700' },
-  mining: { title: 'Mining & Industry', img: '/template_mining.png', color: '#a9a9a9' },
-  recreational: { title: 'Recreational', img: '/template_recreational.png', color: '#00fa9a' },
-  fitness: { title: 'Fitness & Gym', img: '/template_fitness.png', color: '#ff4500' },
-  babysitting: { title: 'Babysitting', img: '/template_babysitting.png', color: '#87ceeb' },
+  salon: { title: 'Salons & Spa', imgDesktop: '/template_salon.png', imgTablet: '/template_salon_tablet.png', imgMobile: '/template_salon_mobile.png', color: '#ffb6c1' },
+  food: { title: 'Food Services', imgDesktop: '/template_food.png', imgTablet: '/template_food_tablet.png', imgMobile: '/template_food_mobile.png', color: '#ffa500' },
+  health: { title: 'Healthcare & Practitioners', imgDesktop: '/template_health.png', imgTablet: '/template_health_tablet.png', imgMobile: '/template_health_mobile.png', color: '#00ced1' },
+  ecommerce: { title: 'E-Commerce Retail', imgDesktop: '/template_ecommerce.png', imgTablet: '/template_ecommerce_tablet.png', imgMobile: '/template_ecommerce_mobile.png', color: '#d2b48c' },
+  realestate: { title: 'Real Estate & Properties', imgDesktop: '/template_realestate.png', imgTablet: '/template_realestate_tablet.png', imgMobile: '/template_realestate_mobile.png', color: '#ffd700' },
+  mining: { title: 'Mining & Industry', imgDesktop: '/template_mining.png', imgTablet: '/template_mining_tablet.png', imgMobile: '/template_mining_mobile.png', color: '#a9a9a9' },
+  recreational: { title: 'Recreational', imgDesktop: '/template_recreational.png', imgTablet: '/template_recreational_tablet.png', imgMobile: '/template_recreational_mobile.png', color: '#00fa9a' },
+  fitness: { title: 'Fitness & Gym', imgDesktop: '/template_fitness.png', imgTablet: '/template_fitness_tablet.png', imgMobile: '/template_fitness_mobile.png', color: '#ff4500' },
+  babysitting: { title: 'Babysitting', imgDesktop: '/template_babysitting.png', imgTablet: '/template_babysitting_tablet.png', imgMobile: '/template_babysitting_mobile.png', color: '#87ceeb' },
 };
 
 const TemplatePreview = () => {
@@ -71,7 +71,9 @@ const TemplatePreview = () => {
           )}
           
           <div className="browser-content">
-            <img src={template.img} alt={`${template.title} UI Preview`} className={`full-preview-image mode-${deviceMode}`} />
+            {deviceMode === 'desktop' && <img src={template.imgDesktop} alt={`${template.title} Desktop Preview`} className={`full-preview-image mode-${deviceMode}`} />}
+            {deviceMode === 'tablet' && <img src={template.imgTablet} alt={`${template.title} Tablet Preview`} className={`full-preview-image mode-${deviceMode}`} />}
+            {deviceMode === 'mobile' && <img src={template.imgMobile} alt={`${template.title} Mobile Preview`} className={`full-preview-image mode-${deviceMode}`} />}
           </div>
         </div>
       </div>
