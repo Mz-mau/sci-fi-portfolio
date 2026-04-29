@@ -13,8 +13,8 @@ const InteractiveBackground = () => {
     let height = (canvas.height = window.innerHeight);
 
     const particles = [];
-    const particleCount = 60;
-    const mouse = { x: 0, y: 0, radius: 150 };
+    const particleCount = 40;
+    const mouse = { x: 0, y: 0, radius: 120 };
 
     class Particle {
       constructor() {

@@ -11,7 +11,7 @@ const Home = () => {
       <section className="hero-section container">
         <div className="hero-content animate-fade-in">
           <div className="badge">AVAILABLE FOR FREELANCE</div>
-          <h1 className="hero-title glitch-text" data-text="Designing Elite Digital Experiences for Every Business.">
+          <h1 className="hero-title">
             Designing Elite <br/> <span className="text-glow">Digital Experiences</span> for Every Business.
           </h1>
           <p className="hero-subtitle delay-1 animate-fade-in">
@@ -59,7 +59,7 @@ const Home = () => {
 
       {/* Starter Templates Section */}
       <section className="templates-section container section" id="templates">
-        <h2 className="section-title glitch-text" data-text="Starter Templates">Starter <span className="gradient-text">Templates</span></h2>
+        <h2 className="section-title">Starter <span className="gradient-text">Templates</span></h2>
         <p style={{ textAlign: 'center', color: 'var(--color-text-secondary)', marginBottom: '3rem', fontSize: '1.2rem' }}>
           Professionally designed, highly customizable themes for your specific business niche.
         </p>
@@ -101,7 +101,7 @@ const Home = () => {
       <section className="newsletter-section container section">
         <div className="newsletter-container glass-panel animate-fade-in">
           <div className="newsletter-content">
-            <h2 className="glitch-text" data-text="Stay Ahead of the Void">Stay Ahead of <span className="gradient-text">the Void</span></h2>
+            <h2>Stay Ahead of <span className="gradient-text">the Void</span></h2>
             <p>Get the latest on high-performance web tech, automation strategies, and new template drops.</p>
           </div>
           <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
@@ -115,10 +115,9 @@ const Home = () => {
       <section className="trust-section container section">
         <p className="trust-title">ENGINEERING FOR VISIONARIES WORLDWIDE</p>
         <div className="trust-logos">
-          <div className="trust-logo">ALPHA</div>
-          <div className="trust-logo">NEON</div>
-          <div className="trust-logo">VOID</div>
-          <div className="trust-logo">CORE</div>
+          <div className="trust-logo">SYEDCO</div>
+          <div className="trust-logo">BETTERHELP COUNSELLING</div>
+          <div className="trust-logo">MARIYAZI JEWELEERY</div>
         </div>
       </section>
     </div>

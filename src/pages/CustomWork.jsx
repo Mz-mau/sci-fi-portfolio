@@ -1,6 +1,7 @@
 import { Palette, Layers, Cpu, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Button from '../components/Button';
+import TiltCard from '../components/TiltCard';
 import './CustomWork.css';
 
 const CustomWork = () => {
@@ -34,7 +35,7 @@ const CustomWork = () => {
 
       <div className="custom-services-grid">
         {services.map((service, index) => (
-          <div key={index} className="custom-service-card glass-panel animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+          <TiltCard key={index} className="custom-service-card glass-panel animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
             <div className="service-icon-wrapper text-glow">{service.icon}</div>
             <h3 className="service-title">{service.title}</h3>
             <p className="service-description">{service.description}</p>
@@ -43,7 +44,7 @@ const CustomWork = () => {
                 <li key={i}>{f}</li>
               ))}
             </ul>
-          </div>
+          </TiltCard>
         ))}
       </div>
 
