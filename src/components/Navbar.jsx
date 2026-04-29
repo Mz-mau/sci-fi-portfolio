@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
-        <Link to="/" className="navbar-logo">
+        <Link to="/" className="navbar-logo glitch-text" data-text="Mariyazi">
           <Hexagon className="logo-icon" />
           <span className="logo-text text-glow">Mariyazi</span>
         </Link>
@@ -37,7 +37,8 @@ const Navbar = () => {
             <Link 
               key={link.name} 
               to={link.path}
-              className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
+              className={`nav-link ${location.pathname === link.path ? 'active' : ''} glitch-text`}
+              data-text={link.name}
               onClick={() => setIsOpen(false)}
             >
               {link.name}

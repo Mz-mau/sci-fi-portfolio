@@ -1,6 +1,7 @@
 import { ArrowRight, Code, Monitor, Zap, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Button from '../components/Button';
+import TiltCard from '../components/TiltCard';
 import './Home.css';
 
 const Home = () => {
@@ -10,7 +11,7 @@ const Home = () => {
       <section className="hero-section container">
         <div className="hero-content animate-fade-in">
           <div className="badge">AVAILABLE FOR FREELANCE</div>
-          <h1 className="hero-title">
+          <h1 className="hero-title glitch-text" data-text="Designing Elite Digital Experiences for Every Business.">
             Designing Elite <br/> <span className="text-glow">Digital Experiences</span> for Every Business.
           </h1>
           <p className="hero-subtitle delay-1 animate-fade-in">
@@ -38,27 +39,27 @@ const Home = () => {
       {/* Features Section */}
       <section className="features-section container section">
         <div className="features-grid">
-          <div className="feature-card glass-panel">
+          <TiltCard className="feature-card glass-panel">
             <Monitor className="feature-icon" size={32} />
             <h3>Immersive UI/UX</h3>
             <p>Designing modern, premium interfaces that focus on visual hierarchy, conversion, and world-class aesthetics.</p>
-          </div>
-          <div className="feature-card glass-panel">
+          </TiltCard>
+          <TiltCard className="feature-card glass-panel">
             <Zap className="feature-icon" size={32} />
             <h3>Blazing Fast</h3>
             <p>Optimized code and assets ensuring instant load times and seamless transitions.</p>
-          </div>
-          <div className="feature-card glass-panel">
+          </TiltCard>
+          <TiltCard className="feature-card glass-panel">
             <Code className="feature-icon" size={32} />
             <h3>Modern Tech</h3>
             <p>Built using the latest web technologies like React, Vite, and highly optimized CSS.</p>
-          </div>
+          </TiltCard>
         </div>
       </section>
 
       {/* Starter Templates Section */}
       <section className="templates-section container section" id="templates">
-        <h2 className="section-title">Starter <span className="gradient-text">Templates</span></h2>
+        <h2 className="section-title glitch-text" data-text="Starter Templates">Starter <span className="gradient-text">Templates</span></h2>
         <p style={{ textAlign: 'center', color: 'var(--color-text-secondary)', marginBottom: '3rem', fontSize: '1.2rem' }}>
           Professionally designed, highly customizable themes for your specific business niche.
         </p>
@@ -78,7 +79,7 @@ const Home = () => {
             { id: 'fitness', title: 'Fitness & Gym', img: '/template_fitness.png', color: '#ff4500' },
             { id: 'babysitting', title: 'Babysitting', img: '/template_babysitting.png', color: '#87ceeb' },
           ].map((template) => (
-            <div key={template.id} className="template-card glass-panel animate-fade-in" style={{ '--theme-color': template.color }}>
+            <TiltCard key={template.id} className="template-card glass-panel animate-fade-in" style={{ '--theme-color': template.color }}>
               <div className="template-image-wrapper">
                 <img src={template.img} alt={template.title} className="template-image" />
                 <div className="template-price-tag">Available at only $119 starting</div>
@@ -91,8 +92,33 @@ const Home = () => {
                   </Button>
                 </Link>
               </div>
-            </div>
+            </TiltCard>
           ))}
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="newsletter-section container section">
+        <div className="newsletter-container glass-panel animate-fade-in">
+          <div className="newsletter-content">
+            <h2 className="glitch-text" data-text="Stay Ahead of the Void">Stay Ahead of <span className="gradient-text">the Void</span></h2>
+            <p>Get the latest on high-performance web tech, automation strategies, and new template drops.</p>
+          </div>
+          <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
+            <input type="email" placeholder="your@email.com" className="form-input" required />
+            <Button variant="primary" size="medium">Subscribe</Button>
+          </form>
+        </div>
+      </section>
+
+      {/* Trust Section */}
+      <section className="trust-section container section">
+        <p className="trust-title">ENGINEERING FOR VISIONARIES WORLDWIDE</p>
+        <div className="trust-logos">
+          <div className="trust-logo">ALPHA</div>
+          <div className="trust-logo">NEON</div>
+          <div className="trust-logo">VOID</div>
+          <div className="trust-logo">CORE</div>
         </div>
       </section>
     </div>

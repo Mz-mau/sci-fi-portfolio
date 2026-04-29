@@ -3,6 +3,8 @@ import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import CustomCursor from './components/CustomCursor';
+import InteractiveBackground from './components/InteractiveBackground';
 import PageTransition from './components/PageTransition';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -12,6 +14,8 @@ import FAQ from './pages/FAQ';
 import Partnership from './pages/Partnership';
 import Booking from './pages/Booking';
 import Terms from './pages/Terms';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import ReturnPolicy from './pages/ReturnPolicy';
 import TemplatePreview from './pages/TemplatePreview';
 
 function AnimatedRoutes() {
@@ -27,6 +31,8 @@ function AnimatedRoutes() {
         <Route path="/partnership" element={<PageTransition><Partnership /></PageTransition>} />
         <Route path="/booking" element={<PageTransition><Booking /></PageTransition>} />
         <Route path="/terms" element={<PageTransition><Terms /></PageTransition>} />
+        <Route path="/privacy" element={<PageTransition><PrivacyPolicy /></PageTransition>} />
+        <Route path="/refund-policy" element={<PageTransition><ReturnPolicy /></PageTransition>} />
         <Route path="/template/:id" element={<PageTransition><TemplatePreview /></PageTransition>} />
       </Routes>
     </AnimatePresence>
@@ -37,11 +43,15 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <Navbar />
-      <main style={{ paddingTop: 'var(--nav-height)' }}>
-        <AnimatedRoutes />
-      </main>
-      <Footer />
+      <CustomCursor />
+      <InteractiveBackground />
+      <div className="app-container">
+        <Navbar />
+        <main>
+          <AnimatedRoutes />
+        </main>
+        <Footer />
+      </div>
     </Router>
   );
 }

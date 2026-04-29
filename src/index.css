@@ -87,8 +87,59 @@ button {
 
 /* Sci-Fi Glow Text Effect */
 .text-glow {
-  text-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+  text-shadow: 0 0 10px rgba(0, 243, 255, 0.5),
+               0 0 20px rgba(0, 243, 255, 0.2);
 }
+
+/* Glitch Effect */
+.glitch-text {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.glitch-text:hover::before {
+  left: 2px;
+  text-shadow: -2px 0 var(--color-accent-purple);
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch-text:hover::after {
+  left: -2px;
+  text-shadow: -2px 0 var(--color-accent-cyan);
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim2 5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% { clip: rect(31px, 9999px, 94px, 0); }
+  20% { clip: rect(62px, 9999px, 42px, 0); }
+  40% { clip: rect(16px, 9999px, 78px, 0); }
+  60% { clip: rect(58px, 9999px, 14px, 0); }
+  80% { clip: rect(93px, 9999px, 32px, 0); }
+  100% { clip: rect(2px, 9999px, 54px, 0); }
+}
+
+@keyframes glitch-anim2 {
+  0% { clip: rect(65px, 9999px, 100px, 0); }
+  20% { clip: rect(12px, 9999px, 58px, 0); }
+  40% { clip: rect(74px, 9999px, 23px, 0); }
+  60% { clip: rect(5px, 9999px, 86px, 0); }
+  80% { clip: rect(37px, 9999px, 12px, 0); }
+  100% { clip: rect(89px, 9999px, 45px, 0); }
+}
+
 .text-glow-purple {
   text-shadow: 0 0 20px rgba(176, 38, 255, 0.4);
 }

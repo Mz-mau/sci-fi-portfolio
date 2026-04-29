@@ -294,3 +294,110 @@
     margin-top: 1rem;
   }
 }
+
+/* Newsletter Section */
+.newsletter-section {
+  padding: 6rem 0;
+}
+
+.newsletter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem;
+  background: linear-gradient(135deg, rgba(176, 38, 255, 0.05), rgba(0, 243, 255, 0.05));
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.newsletter-content {
+  flex: 1;
+}
+
+.newsletter-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter-content p {
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+  max-width: 500px;
+}
+
+.newsletter-form .form-input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  color: #fff;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.newsletter-form .form-input:focus {
+  border-color: var(--color-accent-cyan);
+}
+
+/* Trust Section */
+.trust-section {
+  padding: 4rem 0 8rem;
+  text-align: center;
+}
+
+.trust-title {
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  color: var(--color-text-muted);
+  margin-bottom: 3rem;
+}
+
+.trust-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  opacity: 0.5;
+  flex-wrap: wrap;
+}
+
+.trust-logo {
+  font-family: var(--font-logo);
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: var(--color-text-primary);
+  filter: grayscale(1);
+  transition: all var(--transition-fast);
+}
+
+.trust-logo:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  color: var(--color-accent-cyan);
+  text-shadow: 0 0 10px var(--color-accent-cyan);
+}
+
+@media (max-width: 900px) {
+  .newsletter-container {
+    flex-direction: column;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .newsletter-form {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .trust-logos {
+    gap: 3rem;
+  }
+}
