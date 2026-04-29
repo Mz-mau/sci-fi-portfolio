@@ -346,6 +346,19 @@
   border-color: var(--color-accent-cyan);
 }
 
+.success-message {
+  color: var(--color-accent-cyan);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.error-message {
+  color: #ff4444;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
 /* Trust Section */
 .trust-section {
   padding: 4rem 0 8rem;

@@ -1,8 +1,65 @@
+import { useState } from 'react';
 import { ArrowRight, Code, Monitor, Zap, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Button from '../components/Button';
 import TiltCard from '../components/TiltCard';
 import './Home.css';
+
+const NewsletterForm = () => {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState({ submitting: false, success: false, error: '' });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus({ submitting: true, success: false, error: '' });
+
+    const payload = {
+      access_key: "924db1d5-f1ed-4835-9db7-a7c5b4a0467c",
+      subject: "New Newsletter Subscription",
+      from_name: "Mariyazi Newsletter",
+      email: email,
+    };
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload)
+      });
+      const result = await response.json();
+      if (result.success) {
+        setStatus({ submitting: false, success: true, error: '' });
+        setEmail('');
+      } else {
+        setStatus({ submitting: false, success: false, error: result.message || 'Submission failed.' });
+      }
+    } catch (error) {
+      setStatus({ submitting: false, success: false, error: 'Network error.' });
+    }
+  };
+
+  if (status.success) {
+    return <p className="success-message text-glow">You're in. Welcome to the void.</p>;
+  }
+
+  return (
+    <form className="newsletter-form" onSubmit={handleSubmit}>
+      <input 
+        type="email" 
+        placeholder="your@email.com" 
+        className="form-input" 
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required 
+        disabled={status.submitting}
+      />
+      <Button variant="primary" size="medium" disabled={status.submitting}>
+        {status.submitting ? 'Connecting...' : 'Subscribe'}
+      </Button>
+      {status.error && <p className="error-message">{status.error}</p>}
+    </form>
+  );
+};
 
 const Home = () => {
   return (
@@ -104,10 +161,7 @@ const Home = () => {
             <h2>Stay Ahead of <span className="gradient-text">the Void</span></h2>
             <p>Get the latest on high-performance web tech, automation strategies, and new template drops.</p>
           </div>
-          <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
-            <input type="email" placeholder="your@email.com" className="form-input" required />
-            <Button variant="primary" size="medium">Subscribe</Button>
-          </form>
+          <NewsletterForm />
         </div>
       </section>
 
