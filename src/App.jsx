@@ -3,7 +3,6 @@ import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import CustomCursor from './components/CustomCursor';
 import InteractiveBackground from './components/InteractiveBackground';
 import PageTransition from './components/PageTransition';
 import Home from './pages/Home';
@@ -13,6 +12,7 @@ import CustomWork from './pages/CustomWork';
 import FAQ from './pages/FAQ';
 import Partnership from './pages/Partnership';
 import Booking from './pages/Booking';
+import Contact from './pages/Contact';
 import Terms from './pages/Terms';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import ReturnPolicy from './pages/ReturnPolicy';
@@ -30,6 +30,7 @@ function AnimatedRoutes() {
         <Route path="/faq" element={<PageTransition><FAQ /></PageTransition>} />
         <Route path="/partnership" element={<PageTransition><Partnership /></PageTransition>} />
         <Route path="/booking" element={<PageTransition><Booking /></PageTransition>} />
+        <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
         <Route path="/terms" element={<PageTransition><Terms /></PageTransition>} />
         <Route path="/privacy" element={<PageTransition><PrivacyPolicy /></PageTransition>} />
         <Route path="/refund-policy" element={<PageTransition><ReturnPolicy /></PageTransition>} />
@@ -43,7 +44,6 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <CustomCursor />
       <InteractiveBackground />
       <div className="app-container">
         <Navbar />
