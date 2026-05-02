@@ -30,16 +30,30 @@
 .navbar-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-family: var(--font-logo);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 800;
   color: var(--color-text-primary);
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .logo-icon {
   color: var(--color-accent-cyan);
+  filter: drop-shadow(0 0 5px var(--color-accent-cyan));
+  flex-shrink: 0;
+}
+
+.logo-text {
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to bottom, #fff 50%, var(--color-accent-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .navbar-links {
@@ -114,5 +128,16 @@
   .nav-link {
     font-size: 1.25rem;
     letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-logo {
+    font-size: 1.3rem;
+    gap: 8px;
+  }
+  .logo-icon {
+    width: 20px;
+    height: 20px;
   }
 }
