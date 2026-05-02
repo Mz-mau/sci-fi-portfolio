@@ -25,6 +25,9 @@
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  max-width: 1600px; /* Increased from 1200px */
+  margin: 0 auto;
+  padding: 0 4rem; /* Increased padding */
 }
 
 .navbar-logo {
@@ -139,5 +142,16 @@
   .logo-icon {
     width: 20px;
     height: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .navbar-container {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 1.5rem;
   }
 }
