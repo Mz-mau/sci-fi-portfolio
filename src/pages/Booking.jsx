@@ -27,7 +27,8 @@ const Booking = () => {
       name: formData.name,
       email: formData.email,
       project_details: formData.project,
-      requested_date: date.toDateString()
+      requested_date: date.toDateString(),
+      form_name: "Service Booking Form"
     };
 
     try {

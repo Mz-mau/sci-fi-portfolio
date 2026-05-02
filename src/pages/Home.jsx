@@ -18,6 +18,7 @@ const NewsletterForm = () => {
       subject: "New Newsletter Subscription",
       from_name: "Mariyazi Newsletter",
       email: email,
+      form_name: "Newsletter Subscription Form"
     };
 
     try {

@@ -3,7 +3,6 @@ import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import InteractiveBackground from './components/InteractiveBackground';
 import PageTransition from './components/PageTransition';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -44,7 +43,6 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <InteractiveBackground />
       <div className="app-container">
         <Navbar />
         <main>

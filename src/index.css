@@ -48,6 +48,9 @@ body {
 
 main {
   padding-top: var(--nav-height);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -205,11 +208,16 @@ button {
     padding: 0 1.5rem;
   }
   .section {
-    padding: 4rem 0;
+    padding: 5rem 0; /* More consistent padding */
   }
-  h1 { font-size: 2.8rem !important; line-height: 1.1; }
+  h1 { font-size: 2.8rem !important; line-height: 1.1; margin-top: 1rem; }
   h2 { font-size: 2.2rem !important; }
   h3 { font-size: 1.6rem !important; }
+  
+  /* Ensure header and content are visually connected but not overlapping */
+  main {
+    padding-top: calc(var(--nav-height) + 1rem);
+  }
 }
 
 @media (max-width: 480px) {

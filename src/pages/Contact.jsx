@@ -22,7 +22,8 @@ const Contact = () => {
       name: formData.name,
       email: formData.email,
       message: formData.message,
-      category: formData.subject
+      category: formData.subject,
+      form_name: "Contact/Inquiry Form"
     };
 
     try {

@@ -234,23 +234,28 @@
   .hero-section {
     flex-direction: column;
     text-align: center;
-    padding-top: 4rem;
+    padding-top: 5rem; /* Increased to prevent overlap */
     padding-bottom: 5rem;
     min-height: auto;
+    gap: 3rem;
   }
   
   .hero-content {
-    padding-bottom: 2rem;
+    padding-bottom: 0;
+    max-width: 100%;
   }
   
   .hero-actions {
     justify-content: center;
-    gap: 1rem;
+    gap: 1.25rem;
   }
   
   .hero-visual {
-    margin-top: 2rem;
-    height: 350px;
+    margin-top: 0;
+    height: 300px;
+    width: 100%;
+    order: -1; /* Move visual above text on tablet if desired, or keep after. Actually keep after for better flow */
+    order: 1;
   }
   
   .projects-grid {
@@ -263,24 +268,21 @@
     padding: 3rem 1.5rem;
     text-align: center;
   }
-  
-  .newsletter-content p {
-    margin: 0 auto;
-  }
 }
 
 @media (max-width: 480px) {
   .hero-section {
-    padding-top: 3rem;
+    padding-top: 4rem;
   }
 
   .hero-title {
     font-size: 2.25rem;
+    line-height: 1.2;
   }
 
   .hero-visual {
-    height: 300px;
-    transform: scale(0.8);
+    height: 250px;
+    transform: scale(0.7);
   }
 }
 
