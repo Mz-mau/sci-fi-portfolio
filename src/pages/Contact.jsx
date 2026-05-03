@@ -75,7 +75,7 @@ const Contact = () => {
           <div style={{ marginTop: '4rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '1.5rem' }}>
               <Mail className="text-glow" size={20} />
-              <span style={{ color: 'var(--color-text-secondary)' }}>ops@mariyazi.com</span>
+              <span style={{ color: 'var(--color-text-secondary)' }}>mariyazistudio@gmail.com</span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
               <MessageSquare className="text-glow" size={20} />
@@ -89,7 +89,7 @@ const Contact = () => {
             <div style={{ textAlign: 'center', padding: '3rem 1rem' }}>
               <div className="success-icon" style={{ fontSize: '4rem', marginBottom: '1.5rem' }}>🚀</div>
               <h2 className="text-glow" style={{ marginBottom: '1rem' }}>Transmission Received</h2>
-              <p style={{ color: 'var(--color-text-secondary)' }}>Our engineers will review your request and get back to you within 24 hours.</p>
+              <p style={{ color: 'var(--color-text-secondary)' }}>A secure transmission has been dispatched to <strong>mariyazistudio@gmail.com</strong>. Our engineers will review your request and get back to you within 24 hours.</p>
               <Button variant="outline" size="medium" style={{ marginTop: '2rem' }} onClick={() => setStatus({ ...status, success: false })}>
                 Send Another Message
               </Button>
@@ -129,6 +129,9 @@ const Contact = () => {
               <Button variant="primary" size="large" style={{ width: '100%', marginTop: '1rem' }} disabled={status.submitting}>
                 {status.submitting ? 'Transmitting...' : 'Send Message'}
               </Button>
+              <p style={{ color: 'var(--color-text-muted)', fontSize: '0.8rem', marginTop: '1rem', textAlign: 'center' }}>
+                Every message is instantly forwarded to our team email.
+              </p>
               {status.error && <p style={{ color: '#ff4444', marginTop: '1rem', textAlign: 'center' }}>{status.error}</p>}
             </form>
           )}

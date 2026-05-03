@@ -88,7 +88,7 @@ const Booking = () => {
             <div className="success-message" style={{ textAlign: 'center', padding: '2rem 0', color: 'var(--color-accent-cyan)' }}>
               <CheckCircle size={48} style={{ margin: '0 auto 1rem auto' }} />
               <h4>Request Received</h4>
-              <p style={{ color: 'var(--color-text-secondary)', marginTop: '0.5rem' }}>Your consultation request has been received. Our team will contact you shortly.</p>
+              <p style={{ color: 'var(--color-text-secondary)', marginTop: '0.5rem' }}>Your consultation request has been received and sent to <strong>mariyazistudio@gmail.com</strong>. Our team will contact you shortly.</p>
               <Button variant="outline" size="medium" style={{ marginTop: '2rem' }} onClick={() => setStatus({ ...status, success: false })}>
                 Send Another Request
               </Button>

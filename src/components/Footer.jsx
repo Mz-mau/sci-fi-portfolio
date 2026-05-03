@@ -15,7 +15,7 @@ const Footer = () => {
             Building high-performance custom websites and business automation tools tailored to your unique needs.
           </p>
           <div className="footer-contact" style={{ marginTop: '1.5rem', display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>
-            <Mail size={16} /> <span>ops@mariyazi.com</span>
+            <Mail size={16} /> <span>mariyazistudio@gmail.com</span>
           </div>
         </div>
         
@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="footer-social">
           <a href="#" className="social-link"><Globe size={20} /></a>
           <a href="#" className="social-link"><MessageSquare size={20} /></a>
-          <a href="mailto:ops@mariyazi.com" className="social-link"><Mail size={20} /></a>
+          <a href="mailto:mariyazistudio@gmail.com" className="social-link"><Mail size={20} /></a>
         </div>
       </div>
       <div className="footer-bottom">
