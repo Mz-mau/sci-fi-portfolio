@@ -15,7 +15,7 @@ const Terms = () => {
 
         <h3 style={{ color: 'var(--color-text-primary)', marginTop: '2rem', marginBottom: '1rem' }}>2. Services & Pricing</h3>
         <p>
-          Our starter templates begin at $219. Custom web architectures, comprehensive automation setups, and premium digital packages are priced based on the project scope defined during the discovery phase. A 50% non-refundable deposit is required to commence engineering, with the remaining 50% due upon project completion before final deployment.
+          Our starter templates are currently offered at a special grand opening rate of $219 (regularly $549, 60% off). Custom web architectures, comprehensive automation setups, and premium digital packages are priced based on the project scope defined during the discovery phase. A 50% non-refundable deposit is required to commence engineering, with the remaining 50% due upon project completion before final deployment.
         </p>
 
         <h3 style={{ color: 'var(--color-text-primary)', marginTop: '2rem', marginBottom: '1rem' }}>3. Revisions & Approvals</h3>

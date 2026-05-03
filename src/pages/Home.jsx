@@ -140,7 +140,11 @@ const Home = () => {
             <TiltCard key={template.id} className="template-card glass-panel animate-fade-in" style={{ '--theme-color': template.color }}>
               <div className="template-image-wrapper">
                 <img src={template.img} alt={template.title} className="template-image" />
-                <div className="template-price-tag">Available at only $219 starting</div>
+                <div className="template-price-tag">
+                  <span style={{ textDecoration: 'line-through', opacity: 0.6, marginRight: '8px' }}>$549</span>
+                  <span style={{ color: '#fff', fontWeight: 'bold' }}>$219</span>
+                  <span style={{ marginLeft: '8px', fontSize: '0.8em', color: 'var(--color-accent-cyan)' }}>(60% OFF)</span>
+                </div>
               </div>
               <div className="template-info">
                 <h3 className="template-title" style={{ color: template.color }}>{template.title} Theme</h3>
