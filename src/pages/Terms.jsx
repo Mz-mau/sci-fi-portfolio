@@ -10,7 +10,7 @@ const Terms = () => {
       <div className="terms-content" style={{ color: 'var(--color-text-secondary)', lineHeight: '1.8' }}>
         <h3 style={{ color: 'var(--color-text-primary)', marginTop: '2rem', marginBottom: '1rem' }}>1. Introduction</h3>
         <p>
-          Welcome to Mariyazi. By engaging with our web design and development services, you agree to be bound by the following Terms and Conditions. Please read them carefully before initiating any projects.
+          Welcome to Mariyazi (ABN: 69 353 250 952). By engaging with our web design and development services, you agree to be bound by the following Terms and Conditions. Please read them carefully before initiating any projects.
         </p>
 
         <h3 style={{ color: 'var(--color-text-primary)', marginTop: '2rem', marginBottom: '1rem' }}>2. Services & Pricing</h3>

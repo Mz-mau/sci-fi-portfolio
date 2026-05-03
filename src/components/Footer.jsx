@@ -14,8 +14,13 @@ const Footer = () => {
           <p className="footer-description">
             Building high-performance custom websites and business automation tools tailored to your unique needs.
           </p>
-          <div className="footer-contact" style={{ marginTop: '1.5rem', display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>
-            <Mail size={16} /> <span>mariyazistudio@gmail.com</span>
+          <div className="footer-contact" style={{ marginTop: '1.5rem', display: 'flex', flexDirection: 'column', gap: '8px', color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <Mail size={16} /> <span>mariyazistudio@gmail.com</span>
+            </div>
+            <div style={{ fontSize: '0.75rem', opacity: 0.8, letterSpacing: '1px' }}>
+              ABN: 69 353 250 952
+            </div>
           </div>
         </div>
         
