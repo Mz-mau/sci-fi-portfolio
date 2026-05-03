@@ -22,6 +22,7 @@
   /* Layout & Spacing */
   --max-width: 1200px;
   --nav-height: 80px;
+  --announcement-height: 38px;
 
   /* Animations & Transitions */
   --transition-fast: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -47,7 +48,7 @@ body {
 }
 
 main {
-  padding-top: var(--nav-height);
+  padding-top: calc(var(--nav-height) + var(--announcement-height));
   min-height: 100vh;
   display: flex;
   flex-direction: column;

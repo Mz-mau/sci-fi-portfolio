@@ -1,0 +1,42 @@
+.announcement-bar {
+  background: linear-gradient(90deg, var(--color-accent-purple), var(--color-accent-cyan));
+  color: #000;
+  height: var(--announcement-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 15px rgba(0, 240, 255, 0.2);
+}
+
+.announcement-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  animation: pulse-announcement 2s infinite alternate;
+}
+
+.announcement-icon {
+  fill: #000;
+}
+
+@keyframes pulse-announcement {
+  from { opacity: 0.9; transform: scale(1); }
+  to { opacity: 1; transform: scale(1.02); }
+}
+
+@media (max-width: 480px) {
+  .announcement-bar {
+    font-size: 0.7rem;
+    padding: 6px 10px;
+  }
+}

@@ -3,6 +3,7 @@ import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import AnnouncementBar from './components/AnnouncementBar';
 import PageTransition from './components/PageTransition';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -42,6 +43,7 @@ function AnimatedRoutes() {
 function App() {
   return (
     <Router>
+      <AnnouncementBar />
       <ScrollToTop />
       <div className="app-container">
         <Navbar />

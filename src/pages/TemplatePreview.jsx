@@ -47,7 +47,7 @@ const TemplatePreview = () => {
           </div>
           
           <div className="action-buttons">
-            <span className="preview-price hide-mobile">Only $119 starting</span>
+            <span className="preview-price hide-mobile">Only $219 starting</span>
             <Link to="/booking">
               <Button variant="primary" size="medium" style={{ background: template.color, color: '#000', borderColor: template.color }}>
                 Book This Theme
