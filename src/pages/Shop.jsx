@@ -10,8 +10,8 @@ const Shop = () => {
       title: 'Custom Full Design',
       image: '/package_design.png',
       description: 'A completely bespoke, high-end design architecture crafted specifically for your startup, without the automated deployment setup.',
-      price: '$399',
-      features: ['Bespoke UI/UX Design', 'Up to 5 Pages', 'Flawless Mobile Responsiveness'],
+      price: 'From $399',
+      features: ['UI/UX Design', 'Up to 5 Pages', 'Flawless Mobile Responsiveness'],
       popular: false
     },
     {
@@ -19,7 +19,7 @@ const Shop = () => {
       title: 'The Complete Package',
       image: '/package_complete.png',
       description: 'The ultimate turnkey solution. A fully automated, premium website deployed and ready to capture clients from day one.',
-      price: '$499',
+      price: 'From $499',
       features: ['Full Setup & Automation', 'Free Domain & Hosting', 'SEO Optimization', '1-Month Support'],
       popular: true
     },
@@ -28,7 +28,7 @@ const Shop = () => {
       title: 'Quantum Web Experience',
       image: '/package_quantum.png',
       description: 'The ultimate immersive web application with advanced 3D animations and state-of-the-art tech.',
-      price: '$3,999',
+      price: 'From $3,999',
       features: ['Advanced Animations', 'WebGL/3D Elements', 'Custom Backend', 'Premium Branding'],
       popular: false
     }
