@@ -18,7 +18,7 @@ const Contact = () => {
     const payload = {
       access_key: "924db1d5-f1ed-4835-9db7-a7c5b4a0467c",
       subject: `New Inquiry: ${formData.subject}`,
-      from_name: "MZ Contact Form",
+      from_name: "Mariyazi Contact Form",
       name: formData.name,
       email: formData.email,
       message: formData.message,

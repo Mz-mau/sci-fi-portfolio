@@ -16,7 +16,7 @@ const NewsletterForm = () => {
     const payload = {
       access_key: "924db1d5-f1ed-4835-9db7-a7c5b4a0467c",
       subject: "New Newsletter Subscription",
-      from_name: "MZ Newsletter",
+      from_name: "Mariyazi Newsletter",
       email: email,
       form_name: "Newsletter Subscription Form"
     };
@@ -177,7 +177,7 @@ const Home = () => {
         <div className="trust-logos">
           <div className="trust-logo">SYEDCO</div>
           <div className="trust-logo">BETTERHELP COUNSELLING</div>
-          <div className="trust-logo">MZ JEWELLERY</div>
+          <div className="trust-logo">MARIYAZI JEWELLERY</div>
         </div>
       </section>
     </div>
