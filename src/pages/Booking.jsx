@@ -6,8 +6,8 @@ import Button from '../components/Button';
 import './Booking.css';
 
 const Booking = () => {
-  // TIP: Swap this URL with your own Calendly/Cal.com link to sync with your Google Calendar
-  const SCHEDULING_URL = "https://calendly.com/mariyazistudio/discovery-call"; 
+  // Official Calendly Link for Mariyazi Discovery Calls
+  const SCHEDULING_URL = "https://calendly.com/mariyazworld06/30min"; 
 
   return (
     <div className="booking-page container section animate-fade-in">
