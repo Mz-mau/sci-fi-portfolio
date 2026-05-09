@@ -37,8 +37,8 @@ const About = () => {
             </div>
             <div className="skill-item glass-panel">
               <Terminal className="skill-icon" size={24} />
-              <h4>System Architecture</h4>
-              <p>Scalable, robust systems</p>
+              <h4>Automated Systems</h4>
+              <p>Optimized, high-performance websites</p>
             </div>
           </div>
         </div>

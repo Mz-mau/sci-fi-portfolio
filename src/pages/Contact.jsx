@@ -66,8 +66,8 @@ const Contact = () => {
             <div className="booking-feature">
               <div className="feature-icon-wrapper"><Cpu size={20} /></div>
               <div>
-                <h4>System Architecture</h4>
-                <p>Full-scale business automation and apps.</p>
+                <h4>Automated & Optimized Systems</h4>
+                <p>Full-scale business automation and high-performance websites.</p>
               </div>
             </div>
           </div>
