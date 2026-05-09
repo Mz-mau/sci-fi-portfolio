@@ -429,7 +429,8 @@
     width: 100%;
   }
   .trust-logos {
-    gap: 3rem;
+    gap: 4rem;
+    padding: 0 1.5rem;
   }
   .projects-grid {
     grid-template-columns: 1fr;
