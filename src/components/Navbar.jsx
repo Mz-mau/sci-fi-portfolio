@@ -30,7 +30,7 @@ const Navbar = () => {
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
           <Hexagon className="logo-icon" />
-          <span className="logo-text text-glow">Mariyazi</span>
+          <span className="logo-text">Mariyazi</span>
         </Link>
 
         <div className={`navbar-links ${isOpen ? 'active' : ''}`}>

@@ -58,15 +58,15 @@
 }
 
 .service-card.popular {
-  border-color: rgba(176, 38, 255, 0.4);
-  box-shadow: 0 0 20px rgba(176, 38, 255, 0.1);
-  transform: translateY(-10px);
+  border-color: var(--color-accent-blue);
+  box-shadow: 0 15px 40px rgba(0, 217, 255, 0.1);
+  transform: translateY(-12px);
 }
 
 .service-card.popular:hover {
-  border-color: rgba(176, 38, 255, 0.8);
-  box-shadow: 0 0 30px rgba(176, 38, 255, 0.2);
-  transform: translateY(-15px);
+  border-color: var(--color-accent-blue);
+  box-shadow: 0 20px 50px rgba(0, 217, 255, 0.2);
+  transform: translateY(-16px);
 }
 
 .popular-badge {
@@ -74,40 +74,44 @@
   top: -15px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(90deg, var(--color-accent-purple), var(--color-accent-cyan));
+  background: linear-gradient(90deg, var(--color-accent-blue), #0066FF);
   color: #fff;
-  padding: 6px 16px;
+  padding: 8px 20px;
   border-radius: 20px;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 800;
   display: flex;
   align-items: center;
-  gap: 6px;
-  letter-spacing: 1px;
+  gap: 8px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   z-index: 10;
   white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(0, 217, 255, 0.3);
 }
 
 .service-title {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-bottom: 1rem;
   color: var(--color-text-primary);
+  font-weight: 800;
 }
 
 .service-desc {
   color: var(--color-text-secondary);
-  font-size: 0.95rem;
+  font-size: 1rem;
+  line-height: 1.6;
   margin-bottom: 2rem;
   flex-grow: 1;
 }
 
 .service-price {
   font-family: var(--font-heading);
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   font-weight: 800;
   color: var(--color-text-primary);
   margin-bottom: 2rem;
+  letter-spacing: -1px;
 }
 
 .service-features {
@@ -117,14 +121,14 @@
 .service-features li {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   margin-bottom: 1rem;
   color: var(--color-text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 .feature-bullet {
-  color: var(--color-accent-cyan);
+  color: var(--color-accent-blue);
   flex-shrink: 0;
 }
 

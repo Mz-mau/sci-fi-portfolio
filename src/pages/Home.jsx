@@ -70,7 +70,8 @@ const Home = () => {
         <div className="hero-content animate-fade-in">
           <div className="badge">AVAILABLE FOR FREELANCE</div>
           <h1 className="hero-title">
-            Designing Elite <br/> <span className="text-glow">Digital Experiences</span> for Every Business.
+            Designing <span className="gradient-text">Elite</span> <br/> 
+            <span className="gradient-text-blue">Digital Experiences</span> for <span className="gradient-text-red">Every Business.</span>
           </h1>
           <p className="hero-subtitle delay-1 animate-fade-in">
             We architect high-performance, custom web applications and business automations designed to help founders and ambitious startups scale with absolute efficiency.
@@ -141,9 +142,9 @@ const Home = () => {
               <div className="template-image-wrapper">
                 <img src={template.img} alt={template.title} className="template-image" />
                 <div className="template-price-tag">
-                  <span style={{ textDecoration: 'line-through', opacity: 0.6, marginRight: '8px' }}>$549</span>
-                  <span style={{ color: '#fff', fontWeight: 'bold' }}>From $219</span>
-                  <span style={{ marginLeft: '8px', fontSize: '0.8em', color: 'var(--color-accent-cyan)' }}>(60% OFF)</span>
+                  <span style={{ textDecoration: 'line-through', opacity: 0.5, marginRight: '8px', color: 'var(--color-text-secondary)' }}>$549</span>
+                  <span style={{ color: 'var(--color-text-primary)', fontWeight: '800' }}>From $219</span>
+                  <span style={{ marginLeft: '8px', fontSize: '0.85em', color: 'var(--color-accent-blue)', fontWeight: '700' }}>(60% OFF)</span>
                 </div>
               </div>
               <div className="template-info">

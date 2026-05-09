@@ -85,7 +85,7 @@ const Booking = () => {
           <h3 className="form-title">Schedule a Consultation</h3>
           
           {status.success ? (
-            <div className="success-message" style={{ textAlign: 'center', padding: '2rem 0', color: 'var(--color-accent-cyan)' }}>
+            <div className="success-message" style={{ textAlign: 'center', padding: '2rem 0', color: 'var(--color-accent-blue)' }}>
               <CheckCircle size={48} style={{ margin: '0 auto 1rem auto' }} />
               <h4>Request Received</h4>
               <p style={{ color: 'var(--color-text-secondary)', marginTop: '0.5rem' }}>Your consultation request has been received and sent to <strong>mariyazistudio@gmail.com</strong>. Our team will contact you shortly.</p>
@@ -115,7 +115,7 @@ const Booking = () => {
                 <div className="calendar-wrapper">
                   <Calendar onChange={setDate} value={date} className="sci-fi-calendar" />
                 </div>
-                <p style={{ color: 'var(--color-accent-cyan)', fontSize: '0.9rem', marginTop: '0.5rem' }}>
+                <p style={{ color: 'var(--color-accent-blue)', fontSize: '0.9rem', marginTop: '0.5rem', fontWeight: '600' }}>
                   Selected: {date.toDateString()}
                 </p>
               </div>

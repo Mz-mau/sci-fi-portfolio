@@ -87,8 +87,8 @@ const Contact = () => {
         <div className="booking-form-container glass-panel">
           {status.success ? (
             <div style={{ textAlign: 'center', padding: '3rem 1rem' }}>
-              <div className="success-icon" style={{ fontSize: '4rem', marginBottom: '1.5rem' }}>🚀</div>
-              <h2 className="text-glow" style={{ marginBottom: '1rem' }}>Transmission Received</h2>
+              <div className="success-icon" style={{ fontSize: '4rem', marginBottom: '1.5rem' }}>✨</div>
+              <h2 className="text-glow-blue" style={{ marginBottom: '1rem', fontWeight: '800' }}>Inquiry Received</h2>
               <p style={{ color: 'var(--color-text-secondary)' }}>A secure transmission has been dispatched to <strong>mariyazistudio@gmail.com</strong>. Our engineers will review your request and get back to you within 24 hours.</p>
               <Button variant="outline" size="medium" style={{ marginTop: '2rem' }} onClick={() => setStatus({ ...status, success: false })}>
                 Send Another Message
@@ -108,12 +108,14 @@ const Contact = () => {
                 <label htmlFor="subject">Inquiry Type</label>
                 <select id="subject" value={formData.subject} onChange={handleChange} style={{ 
                   width: '100%', 
-                  padding: '0.8rem', 
-                  background: 'rgba(255,255,255,0.05)', 
+                  padding: '1rem', 
+                  background: '#fff', 
                   border: '1px solid var(--color-border)',
-                  borderRadius: '8px',
-                  color: '#fff',
-                  outline: 'none'
+                  borderRadius: '12px',
+                  color: 'var(--color-text-primary)',
+                  fontSize: '1rem',
+                  outline: 'none',
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.02)'
                 }}>
                   <option value="Logo Design">Logo Design</option>
                   <option value="UI/UX Design">UI/UX Design</option>
